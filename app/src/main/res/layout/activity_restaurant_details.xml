@@ -4,48 +4,66 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/restaurant_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/restaurant_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/restaurant_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
-
-    <TextView
-        android:id="@+id/restaurant_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
-
-    <Button
-        android:id="@+id/view_map_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View on Map" />
-
-    <Button
-        android:id="@+id/get_directions_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Get Directions" />
-
-    <!-- Google Map Fragment -->
+    <!-- Restaurant Map -->
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
+
+    <!-- Restaurant Name -->
+    <EditText
+        android:id="@+id/restaurant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Restaurant Name"
+        android:inputType="text" />
+
+    <!-- Restaurant Address -->
+    <EditText
+        android:id="@+id/restaurant_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Address"
+        android:inputType="text" />
+
+    <!-- Restaurant Phone -->
+    <EditText
+        android:id="@+id/restaurant_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:inputType="phone" />
+
+    <!-- Restaurant Description -->
+    <EditText
+        android:id="@+id/restaurant_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Description"
+        android:inputType="textMultiLine" />
+
+    <!-- Restaurant Tags -->
+    <EditText
+        android:id="@+id/restaurant_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Tags (e.g., Vegan, Italian)"
+        android:inputType="text" />
+
+    <!-- Get Directions Button -->
+    <Button
+        android:id="@+id/get_directions_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Directions"
+        android:layout_gravity="center" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center" />
 </LinearLayout>
