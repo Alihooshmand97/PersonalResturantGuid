@@ -85,7 +85,7 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements OnMa
         double longitude = -73.985428; // Example longitude (use actual longitude)
         updateMapMarker(latitude, longitude);
 
-        Toast.makeText(this, "Restaurant data saved!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "com.example.personalrestaurantguide.Restaurant data saved!", Toast.LENGTH_SHORT).show();
     }
 
     // Update map marker with the given latitude and longitude
@@ -93,7 +93,7 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements OnMa
         if (mMap != null) {
             LatLng restaurantLocation = new LatLng(latitude, longitude);
             mMap.clear(); // Clear any previous markers
-            mMap.addMarker(new MarkerOptions().position(restaurantLocation).title("Restaurant Location"));
+            mMap.addMarker(new MarkerOptions().position(restaurantLocation).title("com.example.personalrestaurantguide.Restaurant Location"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantLocation, 15));
         }
     }
@@ -129,7 +129,7 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements OnMa
         double longitude = -73.985428;
 
         LatLng restaurantLocation = new LatLng(latitude, longitude);
-        mMap.addMarker(new MarkerOptions().position(restaurantLocation).title("Restaurant Location"));
+        mMap.addMarker(new MarkerOptions().position(restaurantLocation).title("com.example.personalrestaurantguide.Restaurant Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantLocation, 15)); // Zoom in on the location
     }
 
@@ -142,7 +142,7 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements OnMa
         if (mMap != null) {
             // Example: Add a marker at the restaurant's location
             LatLng restaurantLocation = new LatLng(40.748817, -73.985428); // Use real coordinates
-            mMap.addMarker(new MarkerOptions().position(restaurantLocation).title("Restaurant Location"));
+            mMap.addMarker(new MarkerOptions().position(restaurantLocation).title("com.example.personalrestaurantguide.Restaurant Location"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantLocation, 15)); // Zoom in on the location
         }
     }

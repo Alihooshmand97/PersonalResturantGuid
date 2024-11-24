@@ -2,68 +2,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/backgroundColor"
+    android:gravity="center_horizontal">
 
-    <!-- Restaurant Map -->
+    <!-- com.example.personalrestaurantguide.Restaurant Map -->
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp" />
 
-    <!-- Restaurant Name -->
+    <!-- com.example.personalrestaurantguide.Restaurant Name -->
     <EditText
         android:id="@+id/restaurant_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Restaurant Name"
-        android:inputType="text" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/primaryTextColor"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Restaurant Address -->
+    <!-- com.example.personalrestaurantguide.Restaurant Address -->
     <EditText
         android:id="@+id/restaurant_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Address"
-        android:inputType="text" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/primaryTextColor"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Restaurant Phone -->
+    <!-- com.example.personalrestaurantguide.Restaurant Phone -->
     <EditText
         android:id="@+id/restaurant_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Phone Number"
-        android:inputType="phone" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/primaryTextColor"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Restaurant Description -->
+    <!-- com.example.personalrestaurantguide.Restaurant Description -->
     <EditText
         android:id="@+id/restaurant_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Description"
-        android:inputType="textMultiLine" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/primaryTextColor"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Restaurant Tags -->
+    <!-- com.example.personalrestaurantguide.Restaurant Tags -->
     <EditText
         android:id="@+id/restaurant_tags"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Tags (e.g., Vegan, Italian)"
-        android:inputType="text" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/primaryTextColor"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
 
-    <!-- Get Directions Button -->
-    <Button
-        android:id="@+id/get_directions_button"
-        android:layout_width="wrap_content"
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Directions"
-        android:layout_gravity="center" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
 
-    <!-- Save Button -->
-    <Button
-        android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:layout_gravity="center" />
+        <Button
+            android:id="@+id/get_directions_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Directions"
+            android:background="@color/buttonColor"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginEnd="8dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:background="@color/buttonColor"
+            android:textColor="@color/primaryTextColor"
+            android:padding="12dp" />
+    </LinearLayout>
+
 </LinearLayout>
