@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.personalrestaurantguide"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -43,6 +43,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("com.google.android.gms:play-services-maps:17.0.1")
     implementation("com.google.android.gms:play-services-location:17.0.0")
-    implementation("androidx.appcompat:appcompat")
-    implementation("androidx.cardview:cardview")
+    implementation ("androidx.room:room-runtime:2.5.1" ) // Room Library
+    annotationProcessor ("androidx.room:room-compiler:2.5.1" ) // Annotation Processor
+
 }

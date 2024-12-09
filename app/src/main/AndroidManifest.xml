@@ -35,6 +35,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <!-- About Activity -->
+        <activity android:name=".AboutActivity" />
+
+        <!-- Map Activity -->
+        <activity android:name=".MapActivity" />
     </application>
 
 </manifest>

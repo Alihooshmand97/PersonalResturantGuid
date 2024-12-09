@@ -6,59 +6,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:background="@color/colorPrimary">
-
-    <!-- Title Text -->
-    <TextView
-        android:id="@+id/title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Restaurant Information"
-        android:textSize="24sp"
-        android:textColor="@color/colorBackground"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    android:padding="16dp">
 
     <!-- Search Bar -->
     <EditText
-        android:id="@+id/search_restaurant"
+        android:id="@+id/search_bar"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:hint="Search Restaurants"
-        android:padding="12dp"
-        android:background="@drawable/search_bar_background"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintTop_toBottomOf="@id/title_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Add Restaurant Button -->
-    <Button
-        android:id="@+id/add_restaurant_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Restaurant"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#451D08"
-        android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/search_restaurant"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/restaurant_cards_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/add_restaurant_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="Search restaurants"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="16dp" />
+        android:layout_marginTop="16dp" />
 
+    <!-- About Button -->
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- RecyclerView for Restaurant List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/restaurant_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/about_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fab_add_restaurant"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Add Restaurant"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
